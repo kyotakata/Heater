@@ -1,15 +1,16 @@
+using Heater.States;
+
 namespace Heater
 {
     public partial class Form1 : Form
     {
-        private enum Condition { OFF, Low, High }
-        private Condition _condition = Condition.OFF;
+        private Context _context = new Context();
+
 
         public Form1()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            DisplayLabel.Text = _condition.ToString();
         }
 
         private void UpButton_Click(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace Heater
                 throw new Exception("error");
             }
 
-            DisplayLabel.Text = _condition.ToString();
+            DisplayLabel.Text = _context.GetText().ToString();
 
         }
     }

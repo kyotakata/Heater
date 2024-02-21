@@ -16,6 +16,11 @@ namespace Heater.States
             _state.UpState(this);
         }
 
+        public string GetText()
+        {
+            return _state.GetText();
+        }
+
         internal void ChangeState(IState state)
         {
             _state = state;
