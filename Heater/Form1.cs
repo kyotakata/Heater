@@ -52,5 +52,12 @@ namespace Heater
             DisplayLabel.Text = _context.GetText().ToString();
 
         }
+
+        private void DownButon_Click(object sender, EventArgs e)
+        {
+            _context.Down();
+            DisplayLabel.Text = _context.GetText().ToString();
+
+        }
     }
 }

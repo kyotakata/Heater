@@ -30,6 +30,7 @@
         {
             this.DisplayLabel = new System.Windows.Forms.Label();
             this.UpButton = new System.Windows.Forms.Button();
+            this.DownButon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DisplayLabel
@@ -56,11 +57,23 @@
             this.UpButton.UseVisualStyleBackColor = true;
             this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
             // 
+            // DownButon
+            // 
+            this.DownButon.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DownButon.Location = new System.Drawing.Point(229, 250);
+            this.DownButon.Name = "DownButon";
+            this.DownButon.Size = new System.Drawing.Size(157, 65);
+            this.DownButon.TabIndex = 2;
+            this.DownButon.Text = "Down";
+            this.DownButon.UseVisualStyleBackColor = true;
+            this.DownButon.Click += new System.EventHandler(this.DownButon_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 340);
+            this.Controls.Add(this.DownButon);
             this.Controls.Add(this.UpButton);
             this.Controls.Add(this.DisplayLabel);
             this.Name = "Form1";
@@ -73,5 +86,6 @@
 
         private Label DisplayLabel;
         private Button UpButton;
+        private Button DownButon;
     }
 }

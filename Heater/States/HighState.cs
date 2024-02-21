@@ -8,6 +8,7 @@ namespace Heater.States
 {
     public sealed class HighState : IState
     {
+
         public IEnumerable<string> GetCommand()
         {
             return new List<string> { "Hi", "1000W"};
@@ -24,5 +25,10 @@ namespace Heater.States
             context.ChangeState(new OffState());
 
         }
+        public void DownState(Context context)
+        {
+            context.ChangeState(new MiddleState());
+        }
+
     }
 }

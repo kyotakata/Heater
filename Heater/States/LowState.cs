@@ -23,5 +23,11 @@ namespace Heater.States
             // Midにしたい
             context.ChangeState(new MiddleState());
         }
+
+        public void DownState(Context context)
+        {
+            context.ChangeState(new OffState());
+        }
+
     }
 }

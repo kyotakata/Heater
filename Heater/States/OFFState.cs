@@ -24,5 +24,10 @@ namespace Heater.States
             context.ChangeState(new LowState());
 
         }
+        public void DownState(Context context)
+        {
+            context.ChangeState(new HighState());
+        }
+
     }
 }
