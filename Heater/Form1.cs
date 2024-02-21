@@ -11,6 +11,8 @@ namespace Heater
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            DisplayLabel.Text = _context.GetText().ToString();
+
         }
 
         private void UpButton_Click(object sender, EventArgs e)

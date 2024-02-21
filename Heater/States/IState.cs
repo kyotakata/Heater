@@ -13,5 +13,6 @@ namespace Heater.States
     {
 
         void UpState(Context context);
+        string GetText();
     }
 }

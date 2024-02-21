@@ -8,6 +8,11 @@ namespace Heater.States
 {
     public sealed class LowState : IState
     {
+        public string GetText()
+        {
+            return "Lo";
+        }
+
         public void UpState(Context context)
         {
             // Hiにしたい
