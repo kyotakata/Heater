@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Heater.States
 {
+    /// <summary>
+    /// 状態を同一視するためのインタフェース
+    /// </summary>
     public interface IState
     {
 
