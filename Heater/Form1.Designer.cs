@@ -54,6 +54,7 @@
             this.UpButton.TabIndex = 1;
             this.UpButton.Text = "Up";
             this.UpButton.UseVisualStyleBackColor = true;
+            this.UpButton.Click += new System.EventHandler(this.UpButton_Click);
             // 
             // Form1
             // 
