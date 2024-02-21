@@ -8,10 +8,10 @@ namespace Heater.States
 {
     public sealed class LowState : IState
     {
-        public void UpState()
+        public void UpState(Context context)
         {
             // Hiにしたい
-            throw new NotImplementedException();
+            context.ChangeState(new HighState());
         }
     }
 }
