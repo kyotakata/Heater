@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Heater.States
 {
-    public sealed class LowState : IState
+    public sealed class OffState : IState
     {
         public void UpState()
         {
-            // Hiにしたい
+            // Lowになりたい
             throw new NotImplementedException();
         }
     }
