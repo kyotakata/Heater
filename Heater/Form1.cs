@@ -17,37 +17,38 @@ namespace Heater
 
         private void UpButton_Click(object sender, EventArgs e)
         {
-            string path = "heater.txt";
+            //string path = "heater.txt";
 
-            if (_condition == Condition.OFF)
-            {
-                var list = new List<string>();
-                list.Add("Low");
-                list.Add("500W");
-                File.WriteAllLines(path, list);
-                _condition = Condition.Low;
-            }
-            else if(_condition == Condition.Low)
-            {
-                var list = new List<string>();
-                list.Add("Hi");
-                list.Add("1000W");
-                File.WriteAllLines(path, list);
-                _condition = Condition.High;
-            }
-            else if (_condition == Condition.High)
-            {
-                var list = new List<string>();
-                list.Add("OFF");
-                list.Add("0W");
-                File.WriteAllLines(path, list);
-                _condition = Condition.OFF;
-            }
-            else
-            {
-                throw new Exception("error");
-            }
+            //if (_condition == Condition.OFF)
+            //{
+            //    var list = new List<string>();
+            //    list.Add("Low");
+            //    list.Add("500W");
+            //    File.WriteAllLines(path, list);
+            //    _condition = Condition.Low;
+            //}
+            //else if(_condition == Condition.Low)
+            //{
+            //    var list = new List<string>();
+            //    list.Add("Hi");
+            //    list.Add("1000W");
+            //    File.WriteAllLines(path, list);
+            //    _condition = Condition.High;
+            //}
+            //else if (_condition == Condition.High)
+            //{
+            //    var list = new List<string>();
+            //    list.Add("OFF");
+            //    list.Add("0W");
+            //    File.WriteAllLines(path, list);
+            //    _condition = Condition.OFF;
+            //}
+            //else
+            //{
+            //    throw new Exception("error");
+            //}
 
+            _context.Up();
             DisplayLabel.Text = _context.GetText().ToString();
 
         }
