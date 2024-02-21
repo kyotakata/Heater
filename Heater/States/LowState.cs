@@ -8,6 +8,11 @@ namespace Heater.States
 {
     public sealed class LowState : IState
     {
+        public IEnumerable<string> GetCommand()
+        {
+            return new List<string> { "Lo", "500W" };
+        }
+
         public string GetText()
         {
             return "Lo";

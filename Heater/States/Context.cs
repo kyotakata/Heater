@@ -14,6 +14,10 @@ namespace Heater.States
         public void Up()
         {
             _state.UpState(this);
+
+            string path = "heater.txt";
+            File.WriteAllLines(path, _state.GetCommand());
+
         }
 
         public string GetText()
