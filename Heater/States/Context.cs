@@ -28,6 +28,13 @@ namespace Heater.States
 
         }
 
+        public void OnOff()
+        {
+            _state.OnOffState(this);
+            Send();
+
+        }
+
         private void Send()
         {
             string path = "heater.txt";

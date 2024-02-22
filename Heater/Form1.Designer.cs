@@ -31,6 +31,7 @@
             this.DisplayLabel = new System.Windows.Forms.Label();
             this.UpButton = new System.Windows.Forms.Button();
             this.DownButon = new System.Windows.Forms.Button();
+            this.OnOffButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DisplayLabel
@@ -39,7 +40,7 @@
             this.DisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DisplayLabel.Font = new System.Drawing.Font("Yu Gothic UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DisplayLabel.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.DisplayLabel.Location = new System.Drawing.Point(133, 60);
+            this.DisplayLabel.Location = new System.Drawing.Point(136, 75);
             this.DisplayLabel.Name = "DisplayLabel";
             this.DisplayLabel.Size = new System.Drawing.Size(356, 91);
             this.DisplayLabel.TabIndex = 0;
@@ -68,11 +69,23 @@
             this.DownButon.UseVisualStyleBackColor = true;
             this.DownButon.Click += new System.EventHandler(this.DownButon_Click);
             // 
+            // OnOffButton
+            // 
+            this.OnOffButton.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OnOffButton.Location = new System.Drawing.Point(12, 9);
+            this.OnOffButton.Name = "OnOffButton";
+            this.OnOffButton.Size = new System.Drawing.Size(160, 48);
+            this.OnOffButton.TabIndex = 3;
+            this.OnOffButton.Text = "ON/OFF";
+            this.OnOffButton.UseVisualStyleBackColor = true;
+            this.OnOffButton.Click += new System.EventHandler(this.OnOffButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 340);
+            this.Controls.Add(this.OnOffButton);
             this.Controls.Add(this.DownButon);
             this.Controls.Add(this.UpButton);
             this.Controls.Add(this.DisplayLabel);
@@ -87,5 +100,6 @@
         private Label DisplayLabel;
         private Button UpButton;
         private Button DownButon;
+        private Button OnOffButton;
     }
 }

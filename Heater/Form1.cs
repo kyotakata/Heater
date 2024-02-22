@@ -66,5 +66,11 @@ namespace Heater
             //DisplayLabel.Text = _context.GetText();
 
         }
+
+        private void OnOffButton_Click(object sender, EventArgs e)
+        {
+            _context.OnOff();
+
+        }
     }
 }

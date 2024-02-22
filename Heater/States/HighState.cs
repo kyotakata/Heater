@@ -22,7 +22,7 @@ namespace Heater.States
         public void UpState(Context context)
         {
             // 次はOFFになりたい
-            context.ChangeState(new OffState());
+            context.ChangeState(new LowState());
 
         }
         public void DownState(Context context)
@@ -30,5 +30,10 @@ namespace Heater.States
             context.ChangeState(new MiddleState());
         }
 
+        public void OnOffState(Context context)
+        {
+            context.ChangeState(new OffState());
+
+        }
     }
 }

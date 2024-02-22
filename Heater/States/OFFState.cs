@@ -20,13 +20,17 @@ namespace Heater.States
 
         public void UpState(Context context)
         {
-            // Lowになりたい
-            context.ChangeState(new LowState());
-
+            throw new Exception("まずはONにしてください");
         }
         public void DownState(Context context)
         {
-            context.ChangeState(new HighState());
+            throw new Exception("まずはONにしてください");
+        }
+
+        public void OnOffState(Context context)
+        {
+            context.ChangeState(new LowState());
+
         }
 
     }
