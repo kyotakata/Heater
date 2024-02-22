@@ -11,7 +11,14 @@ namespace Heater
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            DisplayLabel.Text = _context.GetText().ToString();
+
+            _context_StateChanged();    //初期値表示のために呼ぶ
+            _context.StateChanged += _context_StateChanged;// 登録。通知されたら、登録したイベントを通る
+        }
+
+        private void _context_StateChanged()
+        {
+            DisplayLabel.Text = _context.GetText();
 
         }
 
@@ -49,14 +56,14 @@ namespace Heater
             //}
 
             _context.Up();
-            DisplayLabel.Text = _context.GetText().ToString();
+            //DisplayLabel.Text = _context.GetText();
 
         }
 
         private void DownButon_Click(object sender, EventArgs e)
         {
             _context.Down();
-            DisplayLabel.Text = _context.GetText().ToString();
+            //DisplayLabel.Text = _context.GetText();
 
         }
     }
