@@ -37,9 +37,13 @@ namespace Heater.States
 
         public void Max()
         {
+            if (_state is OffState)
+            {
+                throw new Exception("ONにして！！");
+            }
+
             ChangeState(new HighState());
             Send();
-
         }
 
 
