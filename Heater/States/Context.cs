@@ -39,7 +39,7 @@ namespace Heater.States
         {
             if (_state is OffState)
             {
-                throw new Exception("ONにして！！");
+                throw new OffException();
             }
 
             ChangeState(new HighState());

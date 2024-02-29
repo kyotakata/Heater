@@ -20,11 +20,11 @@ namespace Heater.States
 
         public void UpState(Context context)
         {
-            throw new Exception("まずはONにしてください");
+            throw new OffException();
         }
         public void DownState(Context context)
         {
-            throw new Exception("まずはONにしてください");
+            throw new OffException();
         }
 
         public void OnOffState(Context context)
