@@ -72,5 +72,10 @@ namespace Heater
             _context.OnOff();
 
         }
+
+        private void MaxButton_Click(object sender, EventArgs e)
+        {
+            _context.Max();
+        }
     }
 }

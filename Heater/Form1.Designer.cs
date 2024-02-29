@@ -32,6 +32,7 @@
             this.UpButton = new System.Windows.Forms.Button();
             this.DownButon = new System.Windows.Forms.Button();
             this.OnOffButton = new System.Windows.Forms.Button();
+            this.MaxButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DisplayLabel
@@ -80,11 +81,23 @@
             this.OnOffButton.UseVisualStyleBackColor = true;
             this.OnOffButton.Click += new System.EventHandler(this.OnOffButton_Click);
             // 
+            // MaxButton
+            // 
+            this.MaxButton.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MaxButton.Location = new System.Drawing.Point(404, 179);
+            this.MaxButton.Name = "MaxButton";
+            this.MaxButton.Size = new System.Drawing.Size(157, 65);
+            this.MaxButton.TabIndex = 4;
+            this.MaxButton.Text = "Max";
+            this.MaxButton.UseVisualStyleBackColor = true;
+            this.MaxButton.Click += new System.EventHandler(this.MaxButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 340);
+            this.Controls.Add(this.MaxButton);
             this.Controls.Add(this.OnOffButton);
             this.Controls.Add(this.DownButon);
             this.Controls.Add(this.UpButton);
@@ -101,5 +114,6 @@
         private Button UpButton;
         private Button DownButon;
         private Button OnOffButton;
+        private Button MaxButton;
     }
 }
