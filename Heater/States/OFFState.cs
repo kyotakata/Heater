@@ -8,6 +8,12 @@ namespace Heater.States
 {
     public sealed class OffState : IState
     {
+        private OffState()
+        {
+        }
+
+        public static OffState Instance { get; } = new OffState();
+
         public IEnumerable<string> GetCommand()
         {
             return new List<string> { "OFF", "0W" };
@@ -29,7 +35,7 @@ namespace Heater.States
 
         public void OnOffState(Context context)
         {
-            context.ChangeState(new LowState());
+            context.ChangeState(LowState.Instance);
 
         }
 

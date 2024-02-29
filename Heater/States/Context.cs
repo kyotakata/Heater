@@ -8,7 +8,7 @@ namespace Heater.States
 {
     public sealed class Context
     {
-        private IState _state = new OffState();    // 現在の状態を保持
+        private IState _state = OffState.Instance;    // 現在の状態を保持
         public event Action StateChanged;
 
 
@@ -42,7 +42,7 @@ namespace Heater.States
                 throw new OffException();
             }
 
-            ChangeState(new HighState());
+            ChangeState(HighState.Instance);
             Send();
         }
 
